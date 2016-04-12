@@ -11,13 +11,16 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'HomeController@showWelcome');
 
-Route::get('/hi-jim', function()
-{
-    $name = 'Codeup';
-    return "I love you, $name";
-});
+Route::get('/resume', 'HomeController@showResume');
+
+Route::get('/my-portfolio', 'HomeController@showPortfolio');
+
+Route::get('/sayhello/{name?}/{age?}', 'HomeController@sayHello');
+
+Route::get('roll-dice/{guess}', 'HomeController@rollDice');
+
+Route::get('/simon', 'HomeController@showSimon');
+
+Route::get('/guess', 'HomeController@randomRoll');
