@@ -9,6 +9,7 @@
     @foreach($posts as $post)
         <h3><a href="{{{ action('PostsController@show', $post->id) }}}">{{{ $post->title }}}</a></h3>
         <p>{{{ $post->body }}}</p>
+        <p>Written by: {{{ $post->user->first_name . " " . $post->user->last_name }}}</p>
     @endforeach
 </section>
 <section class="col-sm-2">

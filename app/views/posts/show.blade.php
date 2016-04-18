@@ -7,6 +7,8 @@
         <h1>{{{ $post->title }}}</h1>
         <span>Created at: {{{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A') }}}</span>
 
+        <p>Written by {{{ $post->user->first_name }}}</p>
+
         @if($post->created_at != $post->updated_at)
 
         @endif

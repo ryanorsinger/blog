@@ -13,17 +13,18 @@
 
 Route::get('/', 'HomeController@showWelcome');
 
+Route::get('/login', 'UsersController@showLogin');
+
+Route::post('/login', 'UsersController@doLogin');
+
+Route::get('/logout', 'UsersController@logout');
+
+Route::resource('/users', 'UsersController');
+
 Route::get('/resume', 'HomeController@showResume');
 
 Route::get('/portfolio', 'HomeController@showPortfolio');
 
 Route::resource('posts', 'PostsController');
 
-
-Route::get('/sayhello/{name?}/{age?}', 'HomeController@sayHello');
-
-Route::get('roll-dice/{guess}', 'HomeController@rollDice');
-
 Route::get('/simon', 'HomeController@showSimon');
-
-Route::get('/guess', 'HomeController@randomRoll');
