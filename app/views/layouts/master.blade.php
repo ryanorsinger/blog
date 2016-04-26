@@ -1,10 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-
 <link rel="stylesheet" type="text/css" href="/css/paper.css">
 <link rel="stylesheet" type="text/css" href="/css/sticky_footer.css">
 
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
+
+{{-- Templates extending this  --}}
 @yield('top-script')
 
 </head>

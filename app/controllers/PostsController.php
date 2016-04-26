@@ -18,9 +18,7 @@ class PostsController extends \BaseController {
 
 		$posts = Post::with('user')->get();
 
-		$data = ['posts' => $posts];
-
-		return View::make('posts.index')->with($data);
+		return View::make('posts.index')->with('post', $post);
 	}
 
 

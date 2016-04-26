@@ -16,5 +16,8 @@
             <p>{{{ $post->body }}}</p>
         </div>
 
+        <a href="{{{ action('PostsController@edit', $post->id) }}}" class="btn btn-default">Edit Post</a>
+
+
     </section>
 @stop

@@ -1,0 +1,17 @@
+Topics for technical blog posts
+
+- Explain your debugging process, in general terms. Do you start by adding var_dumps everywhere or is there a method to your madness?
+
+- When the answer wasn't immediately obvious, explain how you solved a particularly tough bug
+
+- Write about how you percieved similarities/differences between PHP and JS
+
+- What's the coolest thing you've ever done with CSS
+
+- What's the most frequent bug you see, why does it occur, and knowing this, how do you program defensively to make sure it doesn't come up in the future?
+
+-  Of HTML, CSS, JS, PHP, and MySQL, which language is your favorite and why?
+
+---
+
+object oriented programming allows us to create our own domain specific language
