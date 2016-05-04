@@ -18,7 +18,7 @@ class PostsController extends \BaseController {
 
 		$posts = Post::with('user')->get();
 
-		return View::make('posts.index')->with('post', $post);
+		return View::make('posts.index')->with('posts', $posts);
 	}
 
 
@@ -40,6 +40,7 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
+
 		$post = new Post();
 
 		return $this->validateAndSave($post);

@@ -12,6 +12,16 @@ Topics for technical blog posts
 
 -  Of HTML, CSS, JS, PHP, and MySQL, which language is your favorite and why?
 
----
+- object oriented programming allows us to create our own domain specific language
 
-object oriented programming allows us to create our own domain specific language
+- 5 things I wish I would have known earlier about bootstrap
+
+- How to debug (scientific process) - It's more than *just* googleing.
+
+- why naming things matters
+
+- comments
+
+- how and why to write a great readme
+
+-

@@ -28,3 +28,7 @@ Route::get('/portfolio', 'HomeController@showPortfolio');
 Route::resource('posts', 'PostsController');
 
 Route::get('/simon', 'HomeController@showSimon');
+
+Route::get('energystar', function() {
+    return View::make('energystar');
+});

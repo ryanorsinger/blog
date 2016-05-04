@@ -56,7 +56,31 @@ class UsersController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$user = new User();
+		$user->first_name = Input::get('first_name');
+		$user->password = Input::get('password');
+
+		$result = $user->save();
+
+		if($result) {
+			$loggedIn = Auth::attempt([
+					'email'    => Input::get('email'),
+					'password' => Input::get('password')]);
+			if($loggedIn) {
+				Session::flash('successMessage', 'User created and logged in successfully');
+				return Redirect::action('UsersController@showUserProfile');
+			} else {
+				Session::flash('errorMessage', 'Username or password information is incorrect');
+				return Redirect::back()->withInput();
+			}
+
+
+		} else {
+			// user was not saved to the db
+			Session::flash('errorMessage', 'Unable to save user, please try again');
+			return Redirect::back()->withInput();
+		}
+
 	}
 
 
